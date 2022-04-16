@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+html {
+  font-family: $font_family;
+}
+a {
+  text-decoration: none;
+  outline: none;
+  color: currentColor;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+input:focus {
+  outline: none;
+}

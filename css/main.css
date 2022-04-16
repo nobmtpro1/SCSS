@@ -1,0 +1,356 @@
+@import url("http://fonts.cdnfonts.com/css/averta-blackitalic");
+@use "sass:math";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+html {
+  font-family: "Averta-Regular", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: currentColor;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+input:focus {
+  outline: none;
+}
+
+.body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.page-home {
+  min-height: 213.33333vw;
+  position: relative;
+}
+
+.page-home::before {
+  position: absolute;
+  content: "";
+  width: 200vw;
+  height: 106.66667vw;
+  left: -100vw;
+  top: 0;
+  background: #39822b;
+  -webkit-clip-path: polygon(100% 0%, 0% 0%, 0% 82.5%, 1% 82.44%, 2% 82.27%, 3% 81.98%, 4% 81.58%, 5% 81.08%, 6% 80.49%, 7% 79.81%, 8% 79.05%, 9% 78.23%, 10% 77.36%, 11% 76.46%, 12% 75.53%, 13% 74.59%, 14% 73.66%, 15% 72.75%, 16% 71.88%, 17% 71.05%, 18% 70.29%, 19% 69.6%, 20% 68.99%, 21% 68.48%, 22% 68.07%, 23% 67.76%, 24% 67.58%, 25% 67.5%, 26% 67.54%, 27% 67.7%, 28% 67.98%, 29% 68.36%, 30% 68.85%, 31% 69.43%, 32% 70.1%, 33% 70.84%, 34% 71.65%, 35% 72.52%, 36% 73.42%, 37% 74.35%, 38% 75.28%, 39% 76.21%, 40% 77.13%, 41% 78.01%, 42% 78.84%, 43% 79.61%, 44% 80.32%, 45% 80.93%, 46% 81.46%, 47% 81.88%, 48% 82.2%, 49% 82.41%, 50% 82.5%, 51% 82.47%, 52% 82.32%, 53% 82.07%, 54% 81.7%, 55% 81.22%, 56% 80.65%, 57% 80%, 58% 79.26%, 59% 78.46%, 60% 77.6%, 61% 76.7%, 62% 75.78%, 63% 74.84%, 64% 73.91%, 65% 72.99%, 66% 72.11%, 67% 71.27%, 68% 70.48%, 69% 69.77%, 70% 69.14%, 71% 68.61%, 72% 68.17%, 73% 67.83%, 74% 67.61%, 75% 67.51%, 76% 67.52%, 77% 67.65%, 78% 67.89%, 79% 68.25%, 80% 68.71%, 81% 69.26%, 82% 69.91%, 83% 70.64%, 84% 71.43%, 85% 72.28%, 86% 73.18%, 87% 74.1%, 88% 75.03%, 89% 75.97%, 90% 76.89%, 91% 77.78%, 92% 78.62%, 93% 79.42%, 94% 80.14%, 95% 80.78%, 96% 81.33%, 97% 81.78%, 98% 82.13%, 99% 82.36%, 100% 82.48%);
+          clip-path: polygon(100% 0%, 0% 0%, 0% 82.5%, 1% 82.44%, 2% 82.27%, 3% 81.98%, 4% 81.58%, 5% 81.08%, 6% 80.49%, 7% 79.81%, 8% 79.05%, 9% 78.23%, 10% 77.36%, 11% 76.46%, 12% 75.53%, 13% 74.59%, 14% 73.66%, 15% 72.75%, 16% 71.88%, 17% 71.05%, 18% 70.29%, 19% 69.6%, 20% 68.99%, 21% 68.48%, 22% 68.07%, 23% 67.76%, 24% 67.58%, 25% 67.5%, 26% 67.54%, 27% 67.7%, 28% 67.98%, 29% 68.36%, 30% 68.85%, 31% 69.43%, 32% 70.1%, 33% 70.84%, 34% 71.65%, 35% 72.52%, 36% 73.42%, 37% 74.35%, 38% 75.28%, 39% 76.21%, 40% 77.13%, 41% 78.01%, 42% 78.84%, 43% 79.61%, 44% 80.32%, 45% 80.93%, 46% 81.46%, 47% 81.88%, 48% 82.2%, 49% 82.41%, 50% 82.5%, 51% 82.47%, 52% 82.32%, 53% 82.07%, 54% 81.7%, 55% 81.22%, 56% 80.65%, 57% 80%, 58% 79.26%, 59% 78.46%, 60% 77.6%, 61% 76.7%, 62% 75.78%, 63% 74.84%, 64% 73.91%, 65% 72.99%, 66% 72.11%, 67% 71.27%, 68% 70.48%, 69% 69.77%, 70% 69.14%, 71% 68.61%, 72% 68.17%, 73% 67.83%, 74% 67.61%, 75% 67.51%, 76% 67.52%, 77% 67.65%, 78% 67.89%, 79% 68.25%, 80% 68.71%, 81% 69.26%, 82% 69.91%, 83% 70.64%, 84% 71.43%, 85% 72.28%, 86% 73.18%, 87% 74.1%, 88% 75.03%, 89% 75.97%, 90% 76.89%, 91% 77.78%, 92% 78.62%, 93% 79.42%, 94% 80.14%, 95% 80.78%, 96% 81.33%, 97% 81.78%, 98% 82.13%, 99% 82.36%, 100% 82.48%);
+  -webkit-animation: bg 20s linear infinite;
+          animation: bg 20s linear infinite;
+  z-index: -1;
+}
+
+@-webkit-keyframes bg {
+  0% {
+    left: -100vw;
+  }
+  100% {
+    left: 0vw;
+  }
+}
+
+@keyframes bg {
+  0% {
+    left: -100vw;
+  }
+  100% {
+    left: 0vw;
+  }
+}
+
+.page-home::after {
+  position: absolute;
+  content: "";
+  width: 200vw;
+  height: 66.66667vw;
+  left: -100vw;
+  bottom: 0;
+  background: #1c2241;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  -webkit-clip-path: polygon(100% 0%, 0% 0%, 0% 82.5%, 1% 82.44%, 2% 82.27%, 3% 81.98%, 4% 81.58%, 5% 81.08%, 6% 80.49%, 7% 79.81%, 8% 79.05%, 9% 78.23%, 10% 77.36%, 11% 76.46%, 12% 75.53%, 13% 74.59%, 14% 73.66%, 15% 72.75%, 16% 71.88%, 17% 71.05%, 18% 70.29%, 19% 69.6%, 20% 68.99%, 21% 68.48%, 22% 68.07%, 23% 67.76%, 24% 67.58%, 25% 67.5%, 26% 67.54%, 27% 67.7%, 28% 67.98%, 29% 68.36%, 30% 68.85%, 31% 69.43%, 32% 70.1%, 33% 70.84%, 34% 71.65%, 35% 72.52%, 36% 73.42%, 37% 74.35%, 38% 75.28%, 39% 76.21%, 40% 77.13%, 41% 78.01%, 42% 78.84%, 43% 79.61%, 44% 80.32%, 45% 80.93%, 46% 81.46%, 47% 81.88%, 48% 82.2%, 49% 82.41%, 50% 82.5%, 51% 82.47%, 52% 82.32%, 53% 82.07%, 54% 81.7%, 55% 81.22%, 56% 80.65%, 57% 80%, 58% 79.26%, 59% 78.46%, 60% 77.6%, 61% 76.7%, 62% 75.78%, 63% 74.84%, 64% 73.91%, 65% 72.99%, 66% 72.11%, 67% 71.27%, 68% 70.48%, 69% 69.77%, 70% 69.14%, 71% 68.61%, 72% 68.17%, 73% 67.83%, 74% 67.61%, 75% 67.51%, 76% 67.52%, 77% 67.65%, 78% 67.89%, 79% 68.25%, 80% 68.71%, 81% 69.26%, 82% 69.91%, 83% 70.64%, 84% 71.43%, 85% 72.28%, 86% 73.18%, 87% 74.1%, 88% 75.03%, 89% 75.97%, 90% 76.89%, 91% 77.78%, 92% 78.62%, 93% 79.42%, 94% 80.14%, 95% 80.78%, 96% 81.33%, 97% 81.78%, 98% 82.13%, 99% 82.36%, 100% 82.48%);
+          clip-path: polygon(100% 0%, 0% 0%, 0% 82.5%, 1% 82.44%, 2% 82.27%, 3% 81.98%, 4% 81.58%, 5% 81.08%, 6% 80.49%, 7% 79.81%, 8% 79.05%, 9% 78.23%, 10% 77.36%, 11% 76.46%, 12% 75.53%, 13% 74.59%, 14% 73.66%, 15% 72.75%, 16% 71.88%, 17% 71.05%, 18% 70.29%, 19% 69.6%, 20% 68.99%, 21% 68.48%, 22% 68.07%, 23% 67.76%, 24% 67.58%, 25% 67.5%, 26% 67.54%, 27% 67.7%, 28% 67.98%, 29% 68.36%, 30% 68.85%, 31% 69.43%, 32% 70.1%, 33% 70.84%, 34% 71.65%, 35% 72.52%, 36% 73.42%, 37% 74.35%, 38% 75.28%, 39% 76.21%, 40% 77.13%, 41% 78.01%, 42% 78.84%, 43% 79.61%, 44% 80.32%, 45% 80.93%, 46% 81.46%, 47% 81.88%, 48% 82.2%, 49% 82.41%, 50% 82.5%, 51% 82.47%, 52% 82.32%, 53% 82.07%, 54% 81.7%, 55% 81.22%, 56% 80.65%, 57% 80%, 58% 79.26%, 59% 78.46%, 60% 77.6%, 61% 76.7%, 62% 75.78%, 63% 74.84%, 64% 73.91%, 65% 72.99%, 66% 72.11%, 67% 71.27%, 68% 70.48%, 69% 69.77%, 70% 69.14%, 71% 68.61%, 72% 68.17%, 73% 67.83%, 74% 67.61%, 75% 67.51%, 76% 67.52%, 77% 67.65%, 78% 67.89%, 79% 68.25%, 80% 68.71%, 81% 69.26%, 82% 69.91%, 83% 70.64%, 84% 71.43%, 85% 72.28%, 86% 73.18%, 87% 74.1%, 88% 75.03%, 89% 75.97%, 90% 76.89%, 91% 77.78%, 92% 78.62%, 93% 79.42%, 94% 80.14%, 95% 80.78%, 96% 81.33%, 97% 81.78%, 98% 82.13%, 99% 82.36%, 100% 82.48%);
+  -webkit-animation: bg 20s linear infinite;
+          animation: bg 20s linear infinite;
+  z-index: -1;
+}
+
+.page-home > .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding-top: 28.53333vw;
+  padding-left: 14.13333vw;
+  padding-right: 14.13333vw;
+}
+
+.page-home > .info > .avatar {
+  width: 19.73333vw;
+  height: 19.73333vw;
+}
+
+.page-home > .info > .avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.page-home > .info > .name {
+  margin-top: 4.26667vw;
+  font-size: 4.26667vw;
+  font-weight: bold;
+  line-height: 5.06667vw;
+}
+
+.page-home > .info > .name span {
+  font-weight: 400;
+}
+
+.page-home > .info > .description {
+  margin-top: 0.8vw;
+  font-size: 3.73333vw;
+  line-height: 4.26667vw;
+}
+
+.page-home > .info > .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2.13333vw;
+  padding: 1.6vw;
+  background: #003AA9;
+  color: white;
+  font-size: 3.2vw;
+  line-height: 3.73333vw;
+  font-weight: 400;
+  margin-top: 3.73333vw;
+}
+
+.page-home > .info > .button > .image {
+  width: 4vw;
+}
+
+.page-home > .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4.26667vw;
+  padding-top: 4.26667vw;
+  margin-top: 4.8vw;
+  padding-bottom: 5.86667vw;
+  border-top: 0.26667vw #D0E7D3 solid;
+  border-bottom: 0.26667vw #D0E7D3 solid;
+  padding-left: 14.13333vw;
+  padding-right: 14.13333vw;
+}
+
+.page-home > .links > .link {
+  width: 100%;
+  height: 10.66667vw;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2.26667vw;
+  padding: 3.2vw;
+  background: white;
+  font-size: 3.46667vw;
+  font-weight: bolder;
+  padding-right: 8vw;
+  position: relative;
+}
+
+.page-home > .links > .link::before {
+  position: absolute;
+  content: "";
+  width: 1.6vw;
+  height: 3.2vw;
+  background: url("../img/arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  right: 4vw;
+  top: 3.73333vw;
+}
+
+.page-home > .links > .link > .img {
+  width: 6.4vw;
+  -webkit-transform: translateY(8%);
+          transform: translateY(8%);
+}
+
+.page-home > .links > .link > .img img {
+  width: 100%;
+}
+
+.page-home > .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 5.33333vw;
+  padding-right: 5.33333vw;
+  padding-top: 2.13333vw;
+  padding-bottom: 8vw;
+  color: white;
+}
+
+.page-home > .footer > .logo {
+  width: 24.53333vw;
+}
+
+.page-home > .footer > .right {
+  width: 45.6vw;
+}
+
+.page-home > .footer > .right > .name {
+  font-size: 1.46667vw;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 2.53333vw;
+}
+
+.page-home > .footer > .right .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.8vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-home > .footer > .right .row > .img {
+  width: 1.33333vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-home > .footer > .right .row > .text {
+  font-size: 1.12vw;
+  font-weight: 300;
+  line-height: 1.6vw;
+}
+
+.page-home > .footer > .right > .bot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 1.6vw;
+}
+
+.page-home > .footer > .right > .bot > .left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.page-home > .footer > .right > .bot > .left > .row {
+  margin-bottom: 0.26667vw;
+}
+
+.page-home > .footer > .right > .bot > .left > .row > .img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #009325;
+  border-radius: 100%;
+  overflow: hidden;
+  width: 1.33333vw;
+  height: 1.33333vw;
+}
+
+.page-home > .footer > .right > .bot > .left > .row > .img img {
+  width: 60%;
+}
+
+.page-home > .footer > .right > .bot > .right {
+  width: 23.2vw;
+}
+
+.page-home > .footer > .right > .bot > .right > .phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.93333vw;
+  font-size: 2.66667vw;
+  font-weight: bold;
+  line-height: 3.2vw;
+  border: 0.20833vw #009325 solid;
+  border-radius: 13.33333vw;
+  cursor: pointer;
+}
+
+.page-home > .footer > .right > .bot > .right > .phone > .img {
+  width: 2vw;
+}
+/*# sourceMappingURL=main.css.map */
