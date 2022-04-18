@@ -14,8 +14,8 @@
     background: white;
 
     & > .background {
-        @include PC{
-            height: p(300);
+        @include PC {
+            height: p(200) !important;
         }
         position: absolute;
         width: 100%;
@@ -26,7 +26,9 @@
         overflow: hidden;
 
         img {
+            height: 100%;
             width: 100%;
+            object-fit: cover;
         }
     }
 
@@ -35,13 +37,12 @@
             padding-top: p(135);
             padding-left: p(50);
             padding-right: p(50);
-          
         }
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding-top: m(88);
+        padding-top: m(100);
         padding-left: m(53);
         padding-right: m(53);
         position: relative;
@@ -56,14 +57,15 @@
             width: m(82);
             height: m(82);
             animation: avatar 1s linear;
-            border-radius: 50%;
+            border-radius: 100%;
+            padding: 0;
             box-shadow: m(0) m(3) m(5) 0px rgba(0, 0, 0, 0.37);
 
             img {
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
                 border-radius: 100%;
+                object-fit: cover;
             }
 
             @keyframes avatar {
@@ -170,7 +172,6 @@
             }
             display: flex;
             justify-content: center;
-            align-items: center;
             gap: m(4);
             margin-top: m(6);
             font-size: m(12);
@@ -238,7 +239,7 @@
         }
 
         & > .icons {
-            @include PC{
+            @include PC {
                 padding-left: p(66);
                 padding-right: p(66);
                 gap: p(40);
@@ -255,7 +256,7 @@
             margin-bottom: m(32);
 
             & > .icon {
-                @include PC{
+                @include PC {
                     width: p(50);
                     height: p(50);
                 }
@@ -264,16 +265,53 @@
                 animation: link 2s;
                 transition: all 200ms;
                 border-radius: 50%;
+                position: relative;
 
-                &:hover{
-                    @include MB{
-                        box-shadow: rgba(0, 0, 0, 0.24) 0px m(3) m(8);
+
+                & > .tooltip {
+                    cursor: unset;
+                    position: absolute;
+                    z-index: 3;
+                    background: rgb(160, 159, 159);
+                    top: p(-10);
+                    right: 50%;
+                    min-width: p(50);
+                    min-height: p(20);
+                    transform: translate(50%, -50%);
+                    padding: p(8);
+                    border-radius: p(5);
+                    font-size: p(12);
+                   opacity: 0;
+                   transition: all 200ms ease-in-out;
+                   white-space: nowrap;
+
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        bottom: p(0);
+                        right: 50%;
+                        width: p(10);
+                        height: p(10);
+                        background: rgb(160, 159, 159);
+                        display: block;
+                        transform: rotate(45deg) translateX(50%);
                     }
-                    transform: translateY(-5%);
-                    box-shadow: rgba(0, 0, 0, 0.24) 0px p(3) p(8);
                 }
 
-                &:nth-child(n + 3){
+                &:hover{
+                    // @include MB{
+                    //     box-shadow: rgba(0, 0, 0, 0.24) 0px m(3) m(8);
+                    // }
+                    // transform: translateY(-5%);
+                    // box-shadow: rgba(0, 0, 0, 0.24) 0px p(3) p(8);
+
+                    & > .tooltip{
+                        opacity: 1;
+                        transform: translate(50%, -100%);
+                    }
+                }
+
+                &:nth-child(n + 3) {
                     animation: link2 2s;
                 }
 
@@ -282,12 +320,12 @@
                 //         transform: translateX(-100vw);
                 //         opacity: 0;
                 //     }
-    
+
                 //     80% {
                 //         transform: translateX(1vw);
                 //         opacity: 1;
                 //     }
-    
+
                 //     100% {
                 //         transform: translateX(0);
                 //         opacity: 1;
@@ -373,16 +411,16 @@
                 flex: 1;
                 overflow: hidden;
                 span {
-                    @include PC{
+                    @include PC {
                         font-size: p(25);
                         line-height: p(27);
-                        margin-left: p(24);
+                        // margin-left: p(24);
                     }
                     color: #898989;
                     font-weight: bolder;
                     font-size: m(16);
                     line-height: m(18);
-                    margin-left: m(24);
+                    // margin-left: m(24);
                 }
             }
 
@@ -435,7 +473,7 @@
         }
 
         & > .video {
-            @include PC{
+            @include PC {
                 height: p(300);
             }
             width: 100%;
@@ -477,7 +515,7 @@
         }
 
         & > .right {
-            @include PC{
+            @include PC {
                 margin-top: p(5);
             }
             margin-top: m(2);
@@ -561,7 +599,7 @@
                 }
 
                 & > .right {
-                    @include PC{
+                    @include PC {
                         margin-top: p(10.5);
                     }
                     width: auto;
