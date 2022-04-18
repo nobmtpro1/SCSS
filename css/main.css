@@ -436,8 +436,8 @@ html {
 }
 
 .page-home > .info > .icons > .icon {
-  width: 10.4vw;
-  height: 10.4vw;
+  width: 12vw;
+  height: 12vw;
   -webkit-animation: link 2s;
           animation: link 2s;
   -webkit-transition: all 200ms;
@@ -735,7 +735,7 @@ html {
 }
 
 .page-home > .footer > .logo {
-  width: 31.73333vw;
+  width: 45.33333vw;
 }
 
 @media (min-width: 1025px) {
@@ -755,8 +755,8 @@ html {
 }
 
 .page-home > .footer > .right > .name {
-  font-size: 2.66667vw;
-  line-height: 3.2vw;
+  font-size: 3.73333vw;
+  line-height: 5.33333vw;
   font-weight: bold;
 }
 
@@ -772,7 +772,7 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1.06667vw;
+  gap: 1.6vw;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -788,7 +788,7 @@ html {
 }
 
 .page-home > .footer > .right .row > .img {
-  width: 2.93333vw;
+  width: 4vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -807,9 +807,9 @@ html {
 }
 
 .page-home > .footer > .right .row > .text {
-  font-size: 2.13333vw;
+  font-size: 3.2vw;
   font-weight: 300;
-  line-height: 2.66667vw;
+  line-height: 3.73333vw;
 }
 
 @media (min-width: 1025px) {
@@ -865,8 +865,8 @@ html {
   background: #009325;
   border-radius: 100%;
   overflow: hidden;
-  width: 2.93333vw;
-  height: 2.93333vw;
+  width: 4vw;
+  height: 4vw;
 }
 
 @media (min-width: 1025px) {
@@ -901,13 +901,13 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1.06667vw;
-  font-size: 3.73333vw;
+  gap: 2.66667vw;
+  font-size: 4.8vw;
   font-weight: bold;
-  line-height: 4.26667vw;
+  line-height: 5.33333vw;
   border: 0.26667vw #009325 solid;
   border-radius: 13.33333vw;
-  padding: 0.53333vw 1.86667vw;
+  padding: 1.33333vw 2.66667vw;
   cursor: pointer;
 }
 
@@ -931,7 +931,7 @@ html {
 }
 
 .page-home > .footer > .right > .bot > .right > .phone > .img {
-  width: 3.46667vw;
+  width: 4.26667vw;
   -webkit-filter: brightness(0);
           filter: brightness(0);
 }
