@@ -1,0 +1,71 @@
+.pages-home {
+    background: #153842;
+    min-height: 100vh;
+
+    & > .header {
+        @include MB{
+            padding-top: 14.76rem;
+        }
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 22rem;
+        
+
+        & > .box {
+            @include MB{
+                width: 364rem;
+                box-shadow: 0rem 4rem 15rem rgba(52, 56, 70, 0.2);
+                border-radius: 10rem;
+                padding: 12rem 20rem;
+            }
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            width: 1392rem;
+            box-shadow: 0rem 4rem 15rem rgba(52, 56, 70, 0.2);
+            border-radius: 10rem;
+            padding: 21rem 87rem;
+
+            & > .logo-container {
+                @include MB{
+                    gap: 20rem;
+                }
+                display: flex;
+                gap: 40rem;
+                align-items: center;
+                img {
+                    @include MB{
+                        width: 100rem ;
+                    }
+                    width: 160rem;
+                }
+            }
+            & > ul {
+                @include MB{
+                    display: none;
+                }
+                display: flex;
+                list-style: none;
+                align-items: center;
+                gap: 160rem;
+                font-weight: 400;
+                font-size: 24rem;
+                line-height: 105%;
+            }
+
+            & > .hamburger {
+                @include MB{
+                    width: 24rem;
+                    display: block;
+                }
+                display: none;
+            }
+        }
+    }
+}
