@@ -1,39 +1,38 @@
 @charset "utf-8";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    @include MB {
-        font-size: calc(100vw / 420);
-    }
-    font-family: "Roboto", sans-serif;
-    font-size: calc(100vw / 1920);
+  @include MB {
+    font-size: calc(100vw / 420);
+  }
+  font-family: "Roboto", sans-serif;
+  font-size: calc(100vw / 1440);
 }
 
 body {
-    overflow-x: hidden;
-    font-size: 16rem;
-    font-weight: normal;
-    line-height: normal;
+  overflow-x: hidden;
+  font-size: 16rem;
+  font-weight: normal;
+  line-height: normal;
 }
 
 a {
-    text-decoration: none;
-    outline: none;
-    color: currentColor;
+  text-decoration: none;
+  outline: none;
+  color: currentColor;
 }
 
 img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 input:focus,
 select:focus {
-    outline: none;
+  outline: none;
 }

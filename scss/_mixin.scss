@@ -1,12 +1,12 @@
 @use "sass:math";
-@mixin PC {
-  @media (min-width: 1025px) {
+@mixin desktop {
+  @media only screen and (min-width: 1025px) {
     @content;
   }
 }
 
-@mixin MB {
-  @media (max-width: 1024px) {
+@mixin mobile {
+  @media only screen and (max-width: 1024px) {
     @content;
   }
 }
